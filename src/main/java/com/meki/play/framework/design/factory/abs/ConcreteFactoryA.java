@@ -6,12 +6,12 @@ package com.meki.play.framework.design.factory.abs;
 public class ConcreteFactoryA extends AbstractFactory {
 
     @Override
-    protected ProductB createProductB() {
+    protected AbstractProductB createProductB() {
         return new ProductB();
     }
 
     @Override
-    protected ProductA createProductA() {
+    protected AbstractProductA createProductA() {
         return new ProductA();
     }
 }

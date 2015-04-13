@@ -5,6 +5,6 @@ package com.meki.play.framework.design.factory.abs;
  */
 public abstract class AbstractFactory {
 
-    protected abstract ProductA createProductA();
-    protected abstract ProductB createProductB();
+    protected abstract AbstractProductA createProductA();
+    protected abstract AbstractProductB createProductB();
 }
