@@ -6,4 +6,6 @@ package com.meki.play.framework.design.factory.method;
 public interface IFactory {
 
     public IUser createUser();
+
+    public IDepartment addDepartment();
 }

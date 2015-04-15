@@ -14,6 +14,7 @@ public class StrategyContext {
     public StrategyContext(int type){
         switch (type){
             case 1:
+                this.strategy = new ConcreteStrategy();
                 break;
             case 2:
                 this.strategy = new ConcreteStrategy();

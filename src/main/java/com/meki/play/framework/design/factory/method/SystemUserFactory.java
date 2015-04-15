@@ -1,14 +1,13 @@
 package com.meki.play.framework.design.factory.method;
 
 /**
- * 为每种类型的产品创建工厂
- * Created by user on 2015/4/10.
+ * Created by user on 2015/4/15.
  */
-public class CommonUserFactory implements IFactory {
+public class SystemUserFactory implements IFactory {
 
     @Override
     public IUser createUser() {
-        return new CommonUser();
+        return new SystemUser();
     }
 
     @Override

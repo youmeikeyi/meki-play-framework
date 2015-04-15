@@ -1,6 +1,6 @@
 package com.meki.play.framework.design.factory.method;
 
-import com.meki.play.framework.design.factory.method.IUser;
+import com.meki.play.framework.design.bean.User;
 
 /**
  * Created by user on 2015/4/10.
@@ -8,12 +8,13 @@ import com.meki.play.framework.design.factory.method.IUser;
 public class CommonUser implements IUser {
 
     @Override
-    public int insertUser(IUser user) {
+    public int insertUser(User user) {
         return 1;
     }
 
     @Override
-    public IUser getUser() {
+    public User getUser() {
         return null;
     }
+
 }
