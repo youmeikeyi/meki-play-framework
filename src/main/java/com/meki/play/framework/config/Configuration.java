@@ -4,6 +4,7 @@ import java.util.Map;
 import java.util.Properties;
 
 /**
+ * 单个配置的接口
  * User: jinchao.xu
  * Date: 14-10-10
  * Time: 下午2:54

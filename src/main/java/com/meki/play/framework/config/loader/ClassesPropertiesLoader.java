@@ -12,6 +12,7 @@ import java.net.URL;
 import java.util.*;
 
 /**
+ * 负责加载classpath配置文件
  * User: jinchao.xu
  * Date: 14-10-10
  * Time: 下午4:22
@@ -77,6 +78,10 @@ public class ClassesPropertiesLoader implements PropertiesLoader<PropertiesConfi
         return new HashSet(classDirMap.values());
     }
 
+    /**
+     * 获取当前类加载器
+     * @return
+     */
     private ClassLoader getClassLoader() {
         ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
         if (classLoader == null) {

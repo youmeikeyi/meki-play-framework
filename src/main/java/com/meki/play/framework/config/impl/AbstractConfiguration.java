@@ -13,6 +13,7 @@ import java.util.Map;
 import java.util.Properties;
 
 /**
+ * 单个配置文件的抽象类
  * User: jinchao.xu
  * Date: 14-10-10
  * Time: 下午2:57

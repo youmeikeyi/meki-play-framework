@@ -12,16 +12,41 @@ import com.meki.play.framework.design.bean.User;
 public class Test {
 //    private static Class<?> cls = null;
 
-    public static void main(String[] args){
+    /**
+     * 获取当前类的包名+类名
+     * @return
+     */
+    public String getName(){
+        return this.getClass().getName();
+    }
 
-//        try {
-//            Class<? extends T> cls = Class.forName("").newInstance();
-//        } catch (InstantiationException e) {
-//            e.printStackTrace();
-//        } catch (IllegalAccessException e) {
-//            e.printStackTrace();
-//        } catch (ClassNotFoundException e) {
-//            e.printStackTrace();
-//        }
+    public static void main(String[] args){
+        Test test = new Test();
+        // 1 三种方式
+        Class<?> cls = Test.class;
+//        cls = new Test().getClass();  //2
+        try {
+            //3
+            cls = Class.forName("com.meki.play.framework.design.factory.abs.Test");
+
+            //通过Class实例化其他类
+            cls = Class.forName("com.meki.play.framework.design.bean.User");
+
+            User user;
+            user = (User) cls.newInstance();
+            user.setId(1);
+            user.setName("1");
+            System.out.println(user);
+
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
+        System.out.println(test.getName());
+
+
     }
 }

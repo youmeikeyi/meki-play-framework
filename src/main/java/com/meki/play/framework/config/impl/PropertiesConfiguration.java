@@ -44,7 +44,7 @@ public class PropertiesConfiguration extends AbstractConfiguration {
         if (classLoader != null) {
             try {
                 URL url = classLoader.getResource(this.configName);
-                return readProperties(url);
+                return super.readProperties(url);
             } catch (Exception e) {
                 LOGGER.error(e.getMessage(), e);
             }

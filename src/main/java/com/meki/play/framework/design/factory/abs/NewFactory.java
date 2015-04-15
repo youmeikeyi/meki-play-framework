@@ -1,5 +1,8 @@
 package com.meki.play.framework.design.factory.abs;
 
+import com.meki.play.framework.config.AppConfigs;
+import com.meki.play.framework.config.loader.ClassesPropertiesLoader;
+import com.meki.play.framework.design.bean.User;
 import com.meki.play.framework.design.factory.method.CommonUser;
 import com.meki.play.framework.design.factory.method.IUser;
 import com.meki.play.framework.design.factory.method.SystemUser;
@@ -46,5 +49,20 @@ public class NewFactory {
             iu = new SystemUser();
         }
         return iu;
+    }
+
+    public static void main(String[] args){
+        try{
+
+            IUser iu = (IUser) Class.forName("com.meki.play.framework.design.factory.method.CommonUser").newInstance();
+
+            System.out.println(iu.getClass());
+
+            String userStr = AppConfigs.getInstance().get("User");
+            iu = (IUser) Class.forName(userStr).newInstance();
+            System.out.println(iu.getClass());
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 }
