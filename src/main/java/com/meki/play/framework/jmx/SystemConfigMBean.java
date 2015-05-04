@@ -9,7 +9,7 @@ public interface SystemConfigMBean {
 
 
     /**
-     * 可去除，变为只读
+     * 可去除setter方法，变为只读
      * @param numOfThreads
      */
     public void setThreadCount(int numOfThreads);
