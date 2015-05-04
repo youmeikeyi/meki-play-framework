@@ -7,6 +7,7 @@ package com.meki.play.framework.jmx;
  */
 public interface SystemConfigMBean {
 
+
     /**
      * 可去除，变为只读
      * @param numOfThreads
