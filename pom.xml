@@ -74,6 +74,11 @@
             <artifactId>jmxtools</artifactId>
             <version>1.2.1</version>
         </dependency>
+        <dependency>
+            <groupId>com.betfair.net.java.opendmk</groupId>
+            <artifactId>opendmk-pom</artifactId>
+            <version>1.0-b02</version>
+        </dependency>
 
         <dependency>
             <groupId>org.slf4j</groupId>

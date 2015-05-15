@@ -5,6 +5,8 @@ import com.meki.play.framework.jmx.SystemConfig;
 import javax.management.MBeanServer;
 import javax.management.ObjectName;
 import java.lang.management.ManagementFactory;
+import java.util.Map;
+import java.util.TreeMap;
 
 /**
  * Created by xujinchao on 2015/5/5.
@@ -23,5 +25,18 @@ public class SystemConfigAgent {
 //        server.registerMBean(adaptorServer, adapterName);
 //        adaptorServer.start();
         System.out.println("start......");
+
+        Map<String, String> test = new TreeMap<String, String>();
+        test.put("abc", "12");
+        test.put("z", "sd");
+        test.put("o", "s");
+        System.out.println(test);
+
+        for(Map.Entry<String, String> entry: test.entrySet()){
+            System.out.println("key:" + entry.getKey() +", value=" + entry.getValue());
+        }
+        Integer s = 2;
+        int l = 2;
+        System.out.println(s.equals(l));
     }
 }
