@@ -1,6 +1,8 @@
 package com.meki.play.framework.thread;
 
 /**
+ * 守护线程
+ * 扩展Java自带Thread
  * Created by user on 2015/5/4.
  */
 public class ThreadHelper extends Thread {
