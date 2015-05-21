@@ -10,14 +10,14 @@ public class ThreadHelper extends Thread {
     private volatile boolean running = true;
     private boolean idle = true;
 
-    public ThreadHelper(String var){
-        super(var);
+    public ThreadHelper(String name){
+        super(name);
         this.setDaemon(true);
     }
 
-    public ThreadHelper(String var1, boolean var2){
-        super(var1);
-        this.setDaemon(var2);
+    public ThreadHelper(String name, boolean isDaemon){
+        super(name);
+        this.setDaemon(isDaemon);
     }
 
     public final boolean isRunning(){
