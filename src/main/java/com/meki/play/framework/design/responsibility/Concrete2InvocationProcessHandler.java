@@ -15,7 +15,9 @@ public class Concrete2InvocationProcessHandler extends InvocationProcessHandler 
 
     @Override
     public InvocationRequest process(InvocationRequest request) {
-        request.setName("concrete2 process");
+        if (canAccept(request)) {
+            request.setName("concrete2 process");
+        }
         return request;
     }
 }

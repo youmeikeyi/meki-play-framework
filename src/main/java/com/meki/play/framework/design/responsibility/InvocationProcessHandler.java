@@ -5,6 +5,12 @@ package com.meki.play.framework.design.responsibility;
  */
 public abstract class InvocationProcessHandler {
 
+    public InvocationProcessHandler nextHandler;
+
+    public void setNextHandler(InvocationProcessHandler handler){
+        this.nextHandler = handler;
+    }
+
     /**
      * 是否可处理该请求
      * @param request
@@ -19,4 +25,7 @@ public abstract class InvocationProcessHandler {
      */
     public abstract InvocationRequest process(InvocationRequest request);
 
+    public InvocationProcessHandler next() {
+        return nextHandler != null ? nextHandler : new DefaultInvocationProcessHandler();
+    }
 }
