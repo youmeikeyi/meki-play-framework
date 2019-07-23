@@ -5,7 +5,7 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
 /**
- * 动态代理
+ * 动态代理角色
  * Created by xujinchao on 2015/6/30.
  */
 public class DynamicProxyHandler implements InvocationHandler {
@@ -29,10 +29,18 @@ public class DynamicProxyHandler implements InvocationHandler {
 
     public static void main(String[] args) {
         RealSubject real = new RealSubject();
-        real.sayHello("ss", 12);
+        System.out.println(real.sayHello("ss", 12));
 
+        InvocationHandler invocationHandler = new DynamicProxyHandler(real);
+
+        System.out.println();
+        // Proxy.newProxyInstance构建代理对象
         Subject proxy = (Subject) Proxy.newProxyInstance(Subject.class.getClassLoader(),
-                new Class[]{Subject.class}, new DynamicProxyHandler(real));
+                new Class[]{Subject.class}, invocationHandler);
+
+//        Class<?> classType = invocationHandler.getClass();
+//        proxy = (Subject) Proxy.newProxyInstance(classType.getClassLoader(),
+//                real.getClass().getInterfaces(), invocationHandler);
         proxy.sayHello("ss", 22);
     }
 }

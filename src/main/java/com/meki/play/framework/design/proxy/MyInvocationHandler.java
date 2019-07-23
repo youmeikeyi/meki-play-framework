@@ -5,6 +5,7 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
 /**
+ * 动态代理工厂模式
  * Created by user on 2015/4/16.
  */
 public class MyInvocationHandler implements InvocationHandler {

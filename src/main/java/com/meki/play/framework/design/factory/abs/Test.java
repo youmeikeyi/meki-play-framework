@@ -162,10 +162,10 @@ public class Test {
         // 1 三种方式
         Class<?> cls = Test.class;
         //2
-//        cls = new Test().getClass();
+//        cls = new ReflectionTest().getClass();
         try {
             //3
-            cls = Class.forName("com.meki.play.framework.design.factory.abs.Test");
+            cls = Class.forName("com.meki.play.framework.design.factory.abs.ReflectionTest");
 
             //通过Class实例化其他类
             cls = Class.forName("com.meki.play.framework.design.bean.User");
